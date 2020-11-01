@@ -9,6 +9,7 @@ const Home = () => {
                 <p> Abstrat Data Structure more info you can find here <a href="https://computersciencewiki.org/index.php/Abstract_data_structures">Link</a><br />
                 When you click on one of the data structure <br />
                 Then you can learn and play with the functionality of each data structure you choose.
+                Enjoy!
                 </p>
             </div>
         </div>

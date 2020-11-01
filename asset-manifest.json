@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DataStructure/static/css/main.437876e2.chunk.css",
+    "main.js": "/DataStructure/static/js/main.b0fe216f.chunk.js",
+    "main.js.map": "/DataStructure/static/js/main.b0fe216f.chunk.js.map",
+    "runtime-main.js": "/DataStructure/static/js/runtime-main.d14ff475.js",
+    "runtime-main.js.map": "/DataStructure/static/js/runtime-main.d14ff475.js.map",
+    "static/js/2.a9264ec2.chunk.js": "/DataStructure/static/js/2.a9264ec2.chunk.js",
+    "static/js/2.a9264ec2.chunk.js.map": "/DataStructure/static/js/2.a9264ec2.chunk.js.map",
+    "static/js/3.a256ddd0.chunk.js": "/DataStructure/static/js/3.a256ddd0.chunk.js",
+    "static/js/3.a256ddd0.chunk.js.map": "/DataStructure/static/js/3.a256ddd0.chunk.js.map",
+    "index.html": "/DataStructure/index.html",
+    "static/css/main.437876e2.chunk.css.map": "/DataStructure/static/css/main.437876e2.chunk.css.map",
+    "static/js/2.a9264ec2.chunk.js.LICENSE.txt": "/DataStructure/static/js/2.a9264ec2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d14ff475.js",
+    "static/js/2.a9264ec2.chunk.js",
+    "static/css/main.437876e2.chunk.css",
+    "static/js/main.b0fe216f.chunk.js"
+  ]
+}

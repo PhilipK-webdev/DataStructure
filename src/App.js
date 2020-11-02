@@ -15,6 +15,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/DataStructure">
+            <Home />
+          </Route>
           <Route exact path="/stack">
             <Stack />
           </Route>

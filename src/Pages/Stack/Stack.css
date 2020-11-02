@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.stack{
+
+    text-align: center;
+    margin-top: 100px;
+}
+form{
+    margin-top: 10px;
+}

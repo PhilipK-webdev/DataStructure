@@ -38,6 +38,11 @@ const Rectangle = (props) => {
         setNumber(e.target.value);
     }
 
+    const clickStartOver = (e) => {
+        e.preventDefault();
+        props.setFlag(false);
+        props.setArr([]);
+    }
     return (
         <div className="container">
             {arrayTemp.map((data, index) =>
@@ -52,7 +57,7 @@ const Rectangle = (props) => {
                 </div>
                 <button type="submit" id="push" className="button4" onClick={push} style={{ marginTop: "10px" }}>push</button>
             </ul>
-
+            <button type="submit" className="button4" onClick={clickStartOver}>Start Over</button>
         </div >
     )
 }

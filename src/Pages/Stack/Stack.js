@@ -21,13 +21,13 @@ const Stack = () => {
     return (
         <div className="container">
             {!flag ? <div>
-                <label >Add to stack : </label>
-                <input type="text" id="inputPush" name="add" placeholder="add..." onChange={submitAdd} />
-                <button type="submit" onClick={handlePush}>Click</button>
+                <label className="form__label">Add to stack : </label>
+                <input type="text" id="inputPush" name="add" placeholder="add..." className="form__input" onChange={submitAdd} />
+                <button type="submit" className="button4" onClick={handlePush} style={{ marginTop: "10px" }}>Click</button>
             </div> : null}
 
             <div className="stack">
-                {flag ? <Rectangle arr={arr} setArr={setArr} /> : <div> Processing...</div>}
+                {flag ? <Rectangle arr={arr} setArr={setArr} setFlag={setFlag} /> : <div className="message"><h1>Processing...</h1> </div>}
             </div>
         </div>
     )

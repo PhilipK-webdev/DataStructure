@@ -1,9 +1,10 @@
 .rectangle {
-    height: 50px;
-    width: 100px;
-    background-color: #555;
+    height: 100px;
+    width: 150px;
+    background-color: #0074d9;
     margin: 0px;
     border-bottom: 1px solid black;
+    border-radius: 5px;
   }
   .container {
     display: flex;
@@ -20,7 +21,6 @@
   }
 
   .button4 {
-
     display: inline-block;
     padding:0.3em 1.2em;
     margin:0 0.1em 0.1em 0;

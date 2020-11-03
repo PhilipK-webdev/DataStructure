@@ -8,8 +8,6 @@ const Stack = () => {
     const [arr, setArr] = useState([]);
     const [flag, setFlag] = useState(false);
 
-
-
     const submitAdd = (e) => {
         setNumber(e.target.value);
     }
@@ -22,9 +20,12 @@ const Stack = () => {
 
     return (
         <div className="container">
-            <label >Add to stack : </label>
-            <input type="text" id="inputPush" name="add" placeholder="add..." onChange={submitAdd} />
-            <button type="submit" onClick={handlePush}>Click</button>
+            {!flag ? <div>
+                <label >Add to stack : </label>
+                <input type="text" id="inputPush" name="add" placeholder="add..." onChange={submitAdd} />
+                <button type="submit" onClick={handlePush}>Click</button>
+            </div> : null}
+
             <div className="stack">
                 {flag ? <Rectangle arr={arr} setArr={setArr} /> : <div> Processing...</div>}
             </div>

@@ -59,6 +59,7 @@ const Rectangle = (props) => {
             </ul>
             <button type="submit" className="button4" onClick={clickStartOver}>Start Over</button>
         </div >
+
     )
 }
 

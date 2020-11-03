@@ -12,6 +12,12 @@
     align-items: center;
     flex-direction: column;
 }
+.containerArray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
   div{
 
   padding-right: 5px;

@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../Rectangle/Rectangle.css"
 const Rectangle = (props) => {
 
+    const [tempSeek, setTempSeek] = useState(false);
     let arrayRectangle = [props.size];
-    if (props.tempSeek) {
+    if (tempSeek) {
         arrayRectangle[0] = (
             <p className="rectangle" key={props.size - 1} id={props.size - 1}>{props.size - 1}</p>
         )
@@ -16,9 +17,33 @@ const Rectangle = (props) => {
         }
     }
 
+
+    const pop = (e) => {
+        e.preventDefault();
+        props.setSize(props.size - 1);
+        setTempSeek(false);
+    }
+    const push = (e) => {
+        e.preventDefault();
+
+        props.setSize(props.size + 1);
+        setTempSeek(false);
+    }
+
+    const seek = (e) => {
+        e.preventDefault();
+        setTempSeek(true);
+    }
+
     return (
-        <div >
+        <div>
             {arrayRectangle}
+            <ul >
+                <button type="submit" id="pop" onClick={pop}>pop</button>
+                <button type="submit" id="seek" onClick={seek}>seek</button>
+                <button type="submit" id="push" onClick={push}>push</button>
+            </ul>
+
         </div>
     )
 }

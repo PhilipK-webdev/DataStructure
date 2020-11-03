@@ -1,35 +1,32 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import Rectangle from '../../components/Rectangle/Rectangle'
 import "../Stack/Stack.css"
 const Stack = () => {
 
-    const [size, setSize] = useState("");
+
+    const [number, setNumber] = useState();
+    const [arr, setArr] = useState([]);
     const [flag, setFlag] = useState(false);
 
-    const submitSize = (e) => {
-        if (e.target.value === "") {
-            setFlag(false);
-        } else {
-            setSize(e.target.value);
-        }
+
+
+    const submitAdd = (e) => {
+        setNumber(e.target.value);
     }
-
-    const click = (e) => {
+    const handlePush = (e) => {
         e.preventDefault();
+        arr.push(number);
+        setArr([...arr]);
         setFlag(true);
-
     }
 
     return (
         <div className="container">
-            <form >
-                <label >Stack Size: </label>
-                <input type="text" id="inputSize" name="size" placeholder="enter size of the stack" onChange={submitSize} />
-                <button type="submit" onClick={click}>Click</button>
-            </form>
-
+            <label >Add to stack : </label>
+            <input type="text" id="inputPush" name="add" placeholder="add..." onChange={submitAdd} />
+            <button type="submit" onClick={handlePush}>Click</button>
             <div className="stack">
-                {flag ? <Rectangle size={size} setSize={setSize} /> : <div> Processing...</div>}
+                {flag ? <Rectangle arr={arr} setArr={setArr} /> : <div> Processing...</div>}
             </div>
         </div>
     )

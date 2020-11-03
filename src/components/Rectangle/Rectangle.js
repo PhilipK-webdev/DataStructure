@@ -3,30 +3,18 @@ import "../Rectangle/Rectangle.css"
 const Rectangle = (props) => {
 
     const [tempSeek, setTempSeek] = useState(false);
-    let arrayRectangle = [props.size];
-    if (tempSeek) {
-        arrayRectangle[0] = (
-            <p className="rectangle" key={props.size - 1} id={props.size - 1}>{props.size - 1}</p>
-        )
 
-    } else {
-        for (let i = 0; i < props.size; i++) {
-            arrayRectangle[i] = (
-                <p className="rectangle" key={props.size - i - 1} id={props.size - i - 1}>{props.size - i - 1}</p>
-            )
-        }
-    }
-
+    const [number, setNumber] = useState();
 
     const pop = (e) => {
         e.preventDefault();
-        props.setSize(props.size - 1);
+        props.arr.pop();
         setTempSeek(false);
     }
     const push = (e) => {
         e.preventDefault();
-
-        props.setSize(props.size + 1);
+        props.arr.push(number);
+        props.setArr([...props.arr]);
         setTempSeek(false);
     }
 
@@ -35,15 +23,22 @@ const Rectangle = (props) => {
         setTempSeek(true);
     }
 
+    const submitAdd = (e) => {
+        setNumber(e.target.value);
+    }
+    props.arr.sort((a, b) => {
+        return b - a;
+    });
     return (
         <div>
-            {arrayRectangle}
+            {props.arr.map((data, index) =>
+                <h1 className="rectangle" key={index} id={index}>{data}</h1>)}
             <ul >
                 <button type="submit" id="pop" onClick={pop}>pop</button>
                 <button type="submit" id="seek" onClick={seek}>seek</button>
                 <button type="submit" id="push" onClick={push}>push</button>
+                <input type="text" id="inputPush" name="add" placeholder="add..." onChange={submitAdd} />
             </ul>
-
         </div>
     )
 }

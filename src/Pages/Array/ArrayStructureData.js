@@ -3,15 +3,16 @@ import Shape from '../../components/Shape/Shape'
 import "../Array/ArrayStructure.css"
 const ArrayStructureData = () => {
 
-    const [length, setLength] = useState("");
+    const [length, setLength] = useState();
     const [arr, setArr] = useState([]);
     const [num, setNum] = useState([]);
     const [singleNumber, setSingleNumber] = useState("");
-    const [count, setCount] = useState(0);
+    const [flagIndex, setFlagIndex] = useState(false);
+    const [flagLastIndex, setFlaglastIndex] = useState(false);
     const [flag, setFlag] = useState(false);
 
     const defineSize = (e) => {
-        setLength(e.target.value);
+        setLength(parseInt(e.target.value));
 
     }
     let tempArr = [];
@@ -22,11 +23,25 @@ const ArrayStructureData = () => {
 
     }
     function buildArray(tempArr) {
-        for (let i = 0; i < length; i++) {
-            tempArr[i] = (
-                <div style={{ textAlign: "center" }} key={i}><Shape key={i} num={num[i]} /></div>
+        if (flagIndex) {
+            tempArr[0] = (
+                <div style={{ textAlign: "center" }} key={0}><Shape key={0} num={num[0]} /></div>
             )
+            setFlagIndex(false);
+        } else if (flagLastIndex) {
+            tempArr[length - 1] = (
+                <div style={{ textAlign: "center" }} key={length - 1}><Shape key={length - 1} num={num[length - 1]} /></div>
+            )
+            setFlaglastIndex(false);
+
+        } else {
+            for (let i = 0; i < length; i++) {
+                tempArr[i] = (
+                    <div style={{ textAlign: "center" }} key={i}><Shape key={i} num={num[i]} /></div>
+                )
+            }
         }
+
 
         return tempArr;
     }
@@ -36,24 +51,37 @@ const ArrayStructureData = () => {
         setSingleNumber(e.target.value);
 
     }
-    let tempCount = 0;
+
     const submitNum = (e) => {
-
         e.preventDefault();
-        if (length > count) {
-            console.log("the length is", length);
-            num.push(singleNumber);
-            setNum([...num]);
-            setArr(buildArray([...tempArr]));
-            tempCount++;
-            setCount(tempCount);
-            console.log("the count is", count);
-        } else {
-
-            console.log("no more memory at the the array")
-        }
+        num.push(singleNumber);
+        setNum([...num]);
+        setArr(buildArray([...tempArr]));
     }
 
+    const firstIndex = (e) => {
+        e.preventDefault();
+        setFlagIndex(true);
+        setArr(buildArray([...tempArr]));
+    }
+
+    const lastIndex = (e) => {
+        e.preventDefault();
+        setFlaglastIndex(true);
+        setArr(buildArray([...tempArr]));
+    }
+
+    const showAll = (e) => {
+        e.preventDefault();
+        submitNum(e);
+    }
+
+    const startOver = (e) => {
+        e.preventDefault();
+        setFlag(false);
+        setArr([]);
+        setNum([]);
+    }
     return (
         <div className="container">
             {!flag ?
@@ -70,8 +98,11 @@ const ArrayStructureData = () => {
                             <input type="text" id="inputPush" name="add" placeholder="add..." className="form__input" onChange={fillArr} />
                         </div>
                         <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={submitNum}>push</button>
+                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={firstIndex}>firstIndex</button>
+                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={lastIndex}>lastIndex</button>
+                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={showAll}>ShowAll</button>
                     </ul>
-                    <button type="submit" className="button4" >Start Over</button>
+                    <button type="submit" className="button4" onClick={startOver}>Start Over</button>
 
                 </div>
             }

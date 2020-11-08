@@ -5,37 +5,53 @@ const ArrayStructureData = () => {
 
     const [length, setLength] = useState("");
     const [arr, setArr] = useState([]);
-    const [num, setNum] = useState("");
+    const [num, setNum] = useState([]);
+    const [singleNumber, setSingleNumber] = useState("");
+    const [count, setCount] = useState(0);
     const [flag, setFlag] = useState(false);
+
     const defineSize = (e) => {
         setLength(e.target.value);
 
     }
+    let tempArr = [];
     const submitSize = (e) => {
         e.preventDefault();
-        let tempArr = [];
         setArr(buildArray(tempArr));
         setFlag(true);
 
     }
     function buildArray(tempArr) {
-
         for (let i = 0; i < length; i++) {
             tempArr[i] = (
-                <div style={{ textAlign: "center" }}><Shape key={i} />{i}</div>
+                <div style={{ textAlign: "center" }} key={i}><Shape key={i} num={num[i]} /></div>
             )
         }
+
         return tempArr;
     }
 
 
     const fillArr = (e) => {
-        setNum(e.target.value);
+        setSingleNumber(e.target.value);
+
     }
-
+    let tempCount = 0;
     const submitNum = (e) => {
-        e.preventDefault();
 
+        e.preventDefault();
+        if (length > count) {
+            console.log("the length is", length);
+            num.push(singleNumber);
+            setNum([...num]);
+            setArr(buildArray([...tempArr]));
+            tempCount++;
+            setCount(tempCount);
+            console.log("the count is", count);
+        } else {
+
+            console.log("no more memory at the the array")
+        }
     }
 
     return (

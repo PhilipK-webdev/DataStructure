@@ -5,7 +5,7 @@ function Shape(props) {
     return (
         <div className="body">
             <div className="shape">
-                <h1>{props.num}</h1>
+                {props.num ? <h1>{props.num}</h1> : <h1>{props.queue}</h1>}
             </div>
         </div>
     )

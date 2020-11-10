@@ -4,11 +4,10 @@ import Shape from '../../components/Shape/Shape';
 const Queue = () => {
 
     const [flag, setFlag] = useState(true);
-    const [dequeueFlag, setDequeueFlag] = useState(false);
-    const [queue, setQueue] = useState([]);
+    const [queue, setQueue] = useState([]);// Data that we want to insert to the Queue
     const [number, setNumber] = useState();
-    const [arrQueue, setArrQueue] = useState([]);
-    const [count, setCount] = useState(0);
+    const [arrQueue, setArrQueue] = useState([]); //The array of Queue
+
 
 
     let tempArr = [];
@@ -17,27 +16,17 @@ const Queue = () => {
     }
     const addToQueue = (e) => {
         e.preventDefault();
-        queue.push(number);
+        queue.unshift(number);
+
         setQueue([...queue]);
-        setArrQueue(createQueue([...tempArr]));
+        setArrQueue(createQueue([tempArr]));
     }
 
     function createQueue(tempArr) {
-        if (dequeueFlag) {
-            for (let i = count; i < queue.length; i++) {
-                tempArr[i] = (
-                    <div style={{ textAlign: "center" }} key={i}><Shape key={i} queue={queue[i]} /></div>
-                )
-            }
-            setDequeueFlag(false);
-            console.log(dequeueFlag);
-        } else {
-
-            for (let i = queue.length - 1; i > 0; i--) {
-                tempArr[i] = (
-                    <div style={{ textAlign: "center" }} key={i}><Shape key={i} queue={queue[i]} /></div>
-                )
-            }
+        for (let i = 0; i < queue.length; i++) {
+            tempArr[queue.length - i - 1] = (
+                <div style={{ textAlign: "center" }} key={i}><Shape key={i} queue={queue[queue.length - i - 1]} /></div>
+            )
         }
 
         return tempArr;
@@ -45,10 +34,14 @@ const Queue = () => {
 
     const dequeue = (e) => {
         e.preventDefault();
-        setArrQueue(createQueue([...tempArr]));
-        setDequeueFlag(true);
-        setCount(count + 1);
-        delete queue[count];
+        queue.shift();
+        setArrQueue(createQueue([tempArr]));
+    }
+
+    const startOver = (e) => {
+        e.preventDefault();
+        setQueue([]);
+        setArrQueue([]);
     }
     return (
         <div className="container">
@@ -56,12 +49,14 @@ const Queue = () => {
                 <div>
                     <label className="form__label" forhtml="add">Add to queue : </label>
                     <input type="text" id="inputPush" name="add" placeholder="add ..." className="form__input" onChange={addQueue} />
-                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToQueue}>Click</button>
+                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToQueue}>Add</button>
                 </div>
                 <div style={{ display: "flex", flexDirection: "row" }}>{arrQueue}</div>
-                <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={dequeue}>Dequeue</button>
-                <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToQueue}>Click</button>
-                <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToQueue}>Click</button>
+                <ul>
+                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={dequeue}>Dequeue</button>
+                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={startOver}>Start Over</button>
+                </ul>
+
             </div>
                 : null}
         </div>

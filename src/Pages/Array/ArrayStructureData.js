@@ -88,7 +88,7 @@ const ArrayStructureData = () => {
                 <div>
                     <label className="form__label" forhtml="add">Add size of array : </label>
                     <input type="text" id="inputPush" name="add" placeholder="add size..." className="form__input" onChange={defineSize} />
-                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={submitSize}>Click</button>
+                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={submitSize}>Add Size</button>
                 </div>
                 : <div>
                     <div style={{ display: "flex", flexDirection: "row" }}>{arr}</div>

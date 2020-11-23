@@ -7,6 +7,26 @@
 .intro{
     color:blue;
     font-size: 20px;
+    box-shadow: 5px 4px 7px 10px #020201;
+    margin-left: 30px;
+    font-family: myFirstFont;
 }
+p{
+    margin-left: 30px;
+}
+h3{
+    text-decoration: underline;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+h1{
+    text-decoration: underline;
+    color: rgb(89, 79, 221);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("../font/Chantelli_Antiqua.ttf");
+  }
 
 

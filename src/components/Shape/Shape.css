@@ -12,4 +12,11 @@
     margin-bottom: 30px;
     float: left;
     margin-top: 10px;
+    transition: width 2s, height 2s, transform 2s;  
+  }
+
+  .shape:hover {
+    width: 150px;
+    height: 150px;
+    transform: rotate(360deg);
   }

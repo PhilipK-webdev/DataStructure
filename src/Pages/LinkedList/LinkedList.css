@@ -18,15 +18,21 @@
   }
   
   .shape {
-      height: 75px;
-      width: 125px;
+      height: 100px;
+      width: 150px;
       background-color: #0074d9;
       border-radius: 5px;
       margin-bottom: 30px;
       margin-right: 10px;
       float: left;
       padding-top: 0px;
+      transition: width 2s, height 2s, transform 2s; 
 
+    }
+    .shape:hover {
+      width: 150px;
+      height: 150px;
+      transform: rotate(360deg);
     }
     .remove{
 

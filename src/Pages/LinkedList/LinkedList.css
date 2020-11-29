@@ -41,6 +41,14 @@
       margin-top: 30px;
       
     }
+
+    .remove input{
+      width: 20% !important;
+      margin-right: 10px;
+     background-color: rgb(228, 164, 158) !important;
+      color: white;
+      font-size: 20px;
+    }
 #pointer {
     width: 150px;
     height: 40px;

@@ -61,7 +61,7 @@ const LinkedListData = () => {
         <div>
             <div className="container">
                 <label className="form__label" forhtml="add">Add to linked list : </label>
-                <input type="text" id="inputPush" name="add" placeholder="add..." className="form__input" onChange={addData} />
+                <input type="text" id="inputPush" name="add" className="form__input" onChange={addData} />
                 <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToNode}>Add</button>
             </div>
             <div className="containerLinked">
@@ -70,11 +70,11 @@ const LinkedListData = () => {
                 ))}
             </div>
             <div className="remove">
-                <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={removeFirst}>Remove First Item</button>
+                <button type="submit" className="button4" style={{ marginTop: "10px", marginRight: "10px" }} onClick={removeFirst}>Remove First Item</button>
                 <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={removeLast}>Remove Last Item</button>
             </div>
             <div className="remove">
-                <input type="text" name="number" placeholder="data to delete..." style={{ marginRight: "10px" }} onChange={dataToDelete} />
+                <input type="text" name="number" placeholder="Data to delete..." onChange={dataToDelete} />
                 <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={removeSpecific}>Remove Specific Item</button>
             </div>
         </div>

@@ -87,22 +87,25 @@ const ArrayStructureData = () => {
             {!flag ?
                 <div>
                     <label className="form__label" forhtml="add">Add size of array : </label>
-                    <input type="text" id="inputPush" name="add" placeholder="add size..." className="form__input" onChange={defineSize} />
-                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={submitSize}>Add Size</button>
+                    <input type="text" id="inputPush" name="add" className="form__input" onChange={defineSize} />
+                    <button type="submit" className="button4" style={{ marginTop: "10px", marginLeft: "35%" }} onClick={submitSize}>Add Size</button>
                 </div>
                 : <div>
                     <div style={{ display: "flex", flexDirection: "row" }}>{arr}</div>
                     <ul>
-                        <div id="input">
-                            <label forhtml="add" className="form__label">Add Number</label>
-                            <input type="text" id="inputPush" name="add" placeholder="add..." className="form__input" onChange={fillArr} />
+                        <div>
+                            <label forhtml="add" className="form__label" style={{ textAlign: "center" }}>Add Number</label>
+                            <input type="text" id="inputPush" name="add" className="form__input" onChange={fillArr} />
                         </div>
-                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={submitNum}>push</button>
-                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={firstIndex}>firstIndex</button>
-                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={lastIndex}>lastIndex</button>
-                        <button type="submit" id="push" className="button4" style={{ marginTop: "10px" }} onClick={showAll}>ShowAll</button>
+                        <div >
+                            <button type="submit" id="push" className="button4" style={{ marginTop: "10px", marginLeft: "25%" }} onClick={submitNum}>push</button>
+                            <button type="submit" id="push" className="button4" style={{ marginTop: "10px", }} onClick={firstIndex}>firstIndex</button>
+                            <button type="submit" id="push" className="button4" style={{ marginTop: "10px", }} onClick={lastIndex}>lastIndex</button>
+                            <button type="submit" id="push" className="button4" style={{ marginTop: "10px", }} onClick={showAll}>ShowAll</button>
+                        </div>
+
                     </ul>
-                    <button type="submit" className="button4" onClick={startOver}>Start Over</button>
+                    <button type="submit" className="button4" style={{ marginLeft: "40%" }} onClick={startOver}>Start Over</button>
 
                 </div>
             }

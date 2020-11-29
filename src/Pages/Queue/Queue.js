@@ -48,12 +48,12 @@ const Queue = () => {
             {flag ? <div>
                 <div>
                     <label className="form__label" forhtml="add">Add to queue : </label>
-                    <input type="text" id="inputPush" name="add" placeholder="add ..." className="form__input" onChange={addQueue} />
-                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToQueue}>Add</button>
+                    <input type="text" id="inputPush" name="add" className="form__input" onChange={addQueue} />
+                    <button type="submit" className="button4" style={{ marginTop: "10px", marginLeft: "35%" }} onClick={addToQueue}>Add</button>
                 </div>
                 <div style={{ display: "flex", flexDirection: "row" }}>{arrQueue}</div>
                 <ul>
-                    <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={dequeue}>Dequeue</button>
+                    <button type="submit" className="button4" style={{ marginTop: "10px", marginLeft: "10%", marginRight: "10px" }} onClick={dequeue}>Dequeue</button>
                     <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={startOver}>Start Over</button>
                 </ul>
 

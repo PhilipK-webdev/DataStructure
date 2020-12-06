@@ -60,7 +60,7 @@ const LinkedListData = () => {
 
         <div>
             <div className="container">
-                <label className="form__label" forhtml="add">Add to linked list : </label>
+                <label className="form__label" forhtml="add" style={{ color: "white" }}>Add to linked list : </label>
                 <input type="text" id="inputPush" name="add" className="form__input" onChange={addData} />
                 <button type="submit" className="button4" style={{ marginTop: "10px" }} onClick={addToNode}>Add</button>
             </div>

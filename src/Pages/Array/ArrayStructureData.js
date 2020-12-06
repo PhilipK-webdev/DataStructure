@@ -86,7 +86,7 @@ const ArrayStructureData = () => {
         <div className="container">
             {!flag ?
                 <div>
-                    <label className="form__label" forhtml="add">Add size of array : </label>
+                    <label className="form__label" forhtml="add" style={{ color: "white" }}>Add size of array : </label>
                     <input type="text" id="inputPush" name="add" className="form__input" onChange={defineSize} />
                     <button type="submit" className="button4" style={{ marginTop: "10px", marginLeft: "35%" }} onClick={submitSize}>Add Size</button>
                 </div>

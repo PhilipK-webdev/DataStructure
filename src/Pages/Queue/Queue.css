@@ -36,6 +36,7 @@
   display: block;
   transition: all 0.3s;
   transform: translateY(0rem);
+    
 }
 
 .form__input {

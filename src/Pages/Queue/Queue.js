@@ -47,7 +47,7 @@ const Queue = () => {
         <div className="container">
             {flag ? <div>
                 <div>
-                    <label className="form__label" forhtml="add">Add to queue : </label>
+                    <label className="form__label" forhtml="add" style={{ color: "white" }}>Add to queue : </label>
                     <input type="text" id="inputPush" name="add" className="form__input" onChange={addQueue} />
                     <button type="submit" className="button4" style={{ marginTop: "10px", marginLeft: "35%" }} onClick={addToQueue}>Add</button>
                 </div>

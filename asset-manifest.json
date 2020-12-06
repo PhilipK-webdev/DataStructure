@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/DataStructure/static/css/main.13eccf76.chunk.css",
-    "main.js": "/DataStructure/static/js/main.f0034258.chunk.js",
-    "main.js.map": "/DataStructure/static/js/main.f0034258.chunk.js.map",
+    "main.css": "/DataStructure/static/css/main.715b1bb0.chunk.css",
+    "main.js": "/DataStructure/static/js/main.fd60ec54.chunk.js",
+    "main.js.map": "/DataStructure/static/js/main.fd60ec54.chunk.js.map",
     "runtime-main.js": "/DataStructure/static/js/runtime-main.e74433ec.js",
     "runtime-main.js.map": "/DataStructure/static/js/runtime-main.e74433ec.js.map",
     "static/js/2.3b64b6c4.chunk.js": "/DataStructure/static/js/2.3b64b6c4.chunk.js",
@@ -10,15 +10,15 @@
     "static/js/3.b849fc73.chunk.js": "/DataStructure/static/js/3.b849fc73.chunk.js",
     "static/js/3.b849fc73.chunk.js.map": "/DataStructure/static/js/3.b849fc73.chunk.js.map",
     "index.html": "/DataStructure/index.html",
-    "static/css/main.13eccf76.chunk.css.map": "/DataStructure/static/css/main.13eccf76.chunk.css.map",
+    "static/css/main.715b1bb0.chunk.css.map": "/DataStructure/static/css/main.715b1bb0.chunk.css.map",
     "static/js/2.3b64b6c4.chunk.js.LICENSE.txt": "/DataStructure/static/js/2.3b64b6c4.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/DataStructure/static/media/Chantelli_Antiqua.8e67fe00.ttf",
-    "static/media/App.css": "/DataStructure/static/media/coding.264e9cd3.jpg"
+    "static/media/App.css": "/DataStructure/static/media/keyboard.c28cbc29.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e74433ec.js",
     "static/js/2.3b64b6c4.chunk.js",
-    "static/css/main.13eccf76.chunk.css",
-    "static/js/main.f0034258.chunk.js"
+    "static/css/main.715b1bb0.chunk.css",
+    "static/js/main.fd60ec54.chunk.js"
   ]
 }

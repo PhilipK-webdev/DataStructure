@@ -4,7 +4,7 @@
   ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
 
 
-# Introduction: Data Structure Info
+# Introduction: Data Structure Info.
 ## User Story
 
 ```
@@ -33,6 +33,11 @@ Visual Studio Code.
 - CSS
 - JavaScript
 - React
+
+## Note
+```
+Future developing - make the app mobile freindly meaning - make the app responsive for any screen.
+```
 
 ## Authors
 

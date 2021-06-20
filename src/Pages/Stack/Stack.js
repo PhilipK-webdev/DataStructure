@@ -27,7 +27,7 @@ const Stack = () => {
             {!flag ? <div>
                 <label className="form__label" forhtml="add" style={{ color: "white" }}>Add to stack : </label>
                 <input type="text" id="inputPush" name="add" className="form__input" required="" onChange={submitAdd} />
-                <button type="submit" className="button4" onClick={handlePush} style={{ marginTop: "10px", marginLeft: "35%" }}>Add</button>
+                <button type="submit" className="button4" onClick={handlePush} style={{ marginTop: "10px", marginLeft: "39%" }}>Add</button>
             </div> : null}
             <div className="stack">
                 {flag ? <div>
